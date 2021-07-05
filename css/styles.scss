@@ -1,0 +1,171 @@
+$color1: #009fe3;
+$color2: #192847;
+
+$gray1: #686b75;
+$gray2: #282a2b;
+
+$gray3: lighten($gray1, 20%);
+$gray4: lighten($gray1, 30%);
+
+@font-face {
+  font-family: 'bignoodletitlingoblique';
+  src: url('../fonts/big_noodle_titling_oblique-webfont.woff2') format('woff2'),
+       url('../fonts/big_noodle_titling_oblique-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*::-moz-selection,
+*::selection {
+  background-color: $color1;
+  color: #FFF;
+}
+
+body {
+  background-color: #FFF;
+  -webkit-font-smoothing: antialiased;
+}
+
+body, input, button {
+  font-size: 16px;
+  font-family: 'bignoodletitlingoblique', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+#root {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+} */
+
+a {
+  color: $color1;
+
+  &:hover {
+    color: darken($color1, 10%);
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  font-size: 1.5rem;
+  color: $gray2;
+}
+
+.grid_schedules {
+  position: relative;
+  font-size: 1.5rem;
+
+  &:before {
+    content: '';
+    background-color: $gray3;
+    position: absolute;
+    width: 2px;
+    top: 34px;
+    left: 40px;
+    bottom: -10px;
+  }
+
+  &__row {
+    display: grid;
+    gap: 0.4rem;
+    grid-template-columns: 50px repeat(6, 1fr);
+    text-align: center;
+
+    & + * {
+      margin-top: 1rem;
+    }
+
+    &.divider {
+      border-top: 2px solid $gray3;
+      padding-top: 1rem;
+    }
+
+    &.title {
+      color: $gray3;
+    }
+  }
+  &__col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &:first-child {
+      text-align: left;
+      color: $gray3;
+    }
+
+    &__label {
+      position: relative;
+      color: #FFF;
+      padding: 4px;
+      
+      &:after {
+        content: '';
+        background-color: $color1;
+        position: absolute;
+        transform: skewX(-12deg);
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+      }
+
+      & + * {
+        top: -2px;
+
+        &:before {
+          content: '';
+          background-color: #FFF;
+          opacity: 0.6;
+          width: 60%;
+          height: 2px;
+          position: absolute;
+          left: 20%;
+          top: -1px;
+        }
+      }
+
+      &.disabled {
+        color: $gray1;
+
+        &:after {
+          background-color: $gray4;
+        }
+      }
+    }
+  }
+}
