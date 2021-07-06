@@ -29,6 +29,7 @@
 body {
   background-color: #FFF;
   -webkit-font-smoothing: antialiased;
+  position: relative;
 }
 
 body:before {

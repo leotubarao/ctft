@@ -32,6 +32,7 @@ $gray4: #D8DEE5;
 body {
   background-color: #FFF;
   -webkit-font-smoothing: antialiased;
+  position: relative;
 
   &:before {
     content: '';
