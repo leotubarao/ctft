@@ -152,6 +152,7 @@ footer {
   position: relative;
   color: #FFF;
   padding: 4px;
+  cursor: default;
 }
 
 .grid_schedules__col__label:after {
