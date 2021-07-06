@@ -100,7 +100,7 @@ footer {
 
 .grid_schedules:before {
   content: '';
-  background-color: #9c9fa7;
+  background-color: #B3B7C1;
   position: absolute;
   width: 2px;
   top: 34px;
@@ -122,12 +122,12 @@ footer {
 }
 
 .grid_schedules__row.divider {
-  border-top: 2px solid #9c9fa7;
+  border-top: 2px solid #B3B7C1;
   padding-top: 1rem;
 }
 
 .grid_schedules__row.title {
-  color: #9c9fa7;
+  color: #B3B7C1;
 }
 
 .grid_schedules__col {
@@ -145,7 +145,7 @@ footer {
 
 .grid_schedules__col:first-child {
   text-align: left;
-  color: #9c9fa7;
+  color: #B3B7C1;
 }
 
 .grid_schedules__col__label {
@@ -183,10 +183,10 @@ footer {
 }
 
 .grid_schedules__col__label.disabled {
-  color: #686b75;
+  color: #B3B7C1;
 }
 
 .grid_schedules__col__label.disabled:after {
-  background-color: #b7b9bf;
+  background-color: #D8DEE5;
 }
 /*# sourceMappingURL=styles.css.map */
