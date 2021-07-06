@@ -32,7 +32,30 @@ $gray4: #D8DEE5;
 body {
   background-color: #FFF;
   -webkit-font-smoothing: antialiased;
+
+  &:before {
+    content: '';
+    background-image: url('../assets/grafismo.svg');
+    background-repeat: repeat;
+    background-size: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
+
+  &:after {
+    content: '';
+    background: linear-gradient(0deg, rgba(255,255,255,0.65) 0%, rgba(255,255,255,1) 30%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+  }
 }
+
 
 body, input, button {
   font-size: 16px;
@@ -47,9 +70,11 @@ button {
   max-width: 700px;
   margin: 0 auto;
   padding: 40px 20px;
+  position: relative;
+  z-index: 1;
 }
 
-/* .sr-only {
+.sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -58,7 +83,7 @@ button {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
-} */
+}
 
 a {
   color: $color1;
@@ -68,11 +93,18 @@ a {
   }
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 3rem;
+  padding: 0 2rem;
+  gap: 1rem;
 }
 
 footer {
@@ -82,11 +114,17 @@ footer {
   margin-top: 3rem;
   font-size: 1.5rem;
   color: $gray2;
+  text-align: center;
 }
 
 .grid_schedules {
   position: relative;
   font-size: 1.5rem;
+
+  @media (max-width: 767.98px) {
+    overflow: auto hidden;
+    padding-bottom: 0.5rem;
+  }
 
   &:before {
     content: '';
@@ -102,6 +140,7 @@ footer {
     display: grid;
     gap: 0.4rem;
     grid-template-columns: 50px repeat(6, 1fr);
+    min-width: 660px;
     text-align: center;
 
     & + * {
@@ -117,6 +156,11 @@ footer {
       color: $gray3;
     }
   }
+
+  [title] {
+    cursor: default;
+  }
+
   &__col {
     display: flex;
     flex-direction: column;
@@ -131,7 +175,6 @@ footer {
       position: relative;
       color: #FFF;
       padding: 4px;
-      cursor: default;
 
       &:after {
         content: '';
