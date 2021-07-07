@@ -1,0 +1,16 @@
+{
+  "presets": [
+    ["env", {
+      "targets": {
+        "esmodules": true
+      },
+      "modules": false
+    }],
+    ["minify", {
+      "mangle": true
+    }]
+  ],
+  "plugins": [
+    "add-module-exports"
+  ]
+}
