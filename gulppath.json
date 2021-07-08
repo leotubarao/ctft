@@ -1,0 +1,39 @@
+{
+  "tasks": {
+    "ltco_styles": {
+      "srcPath": "src/styles/**/*.scss",
+      "destPath": "public/styles"
+    },
+    "ltco_scripts": {
+      "srcPath": [
+        "src/scripts/**/*"
+      ],
+      "destPath": "public/scripts"
+    },
+    "ltco_scripts_plugins": {
+      "srcPath": [
+        "node_modules/feather-icons/dist/feather.min.js",
+        "node_modules/html2canvas/dist/html2canvas.min.js"
+      ],
+      "destPath": "public/scripts"
+    },
+    "ltco_html": {
+      "srcPath": "src/html/**/*.html",
+      "destPath": "public"
+    },
+    "ltco_svgs": {
+      "srcPath": "src/svgs/**/*.svg",
+      "destPath": "public/images/svgs"
+    },
+    "ltco_fonts": {
+      "srcPath": "src/fonts/**/*",
+      "destPath": "public/fonts"
+    }
+  },
+  "watch": {
+    "ltco_styles": "src/styles/**",
+    "ltco_scripts": "src/scripts/**",
+    "ltco_svgs": "src/svgs/**",
+    "ltco_html": "src/html/**"
+  }
+}

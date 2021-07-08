@@ -1,0 +1,43 @@
+{
+  "name": "ctft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "dev:server": "gulp server",
+    "dev": "gulp dev",
+    "build": "NODE_ENV=production gulp",
+    "deploy": "gh-pages -d public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leotubarao/ctft.git"
+  },
+  "keywords": [],
+  "author": "Leônidas Santos <oi@ltco.com.br>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leotubarao/ctft/issues"
+  },
+  "homepage": "https://leotubarao.github.io/ctft/",
+  "dependencies": {
+    "feather-icons": "^4.28.0",
+    "html2canvas": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-add-module-exports": "^1.0.2",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.1",
+    "browser-sync": "^2.26.7",
+    "dotenv": "^8.2.0",
+    "gh-pages": "^3.2.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgmin": "^2.2.0"
+  }
+}

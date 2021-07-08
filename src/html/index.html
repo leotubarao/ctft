@@ -5,20 +5,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Grade Horária CTFT</title>
-  <link rel="stylesheet" href="./public/css/styles.css">
+  <link rel="stylesheet" href="./public/styles/styles.css">
 </head>
 <body>
   <div id="root">
     <div class="container">
       <header>
         <h1>
-          <img src="./public/assets/logo-ctft.svg" width="120" alt="logo CTFT" />
+          <img src="./public/images/svgs/logo-ctft.svg" width="120" alt="logo CTFT" />
         </h1>
         <h2>
-          <img src="./public/assets/grade-horaria.svg" width="200" alt="Título Grade Horária" />
+          <img src="./public/images/svgs/grade-horaria.svg" width="200" alt="Título Grade Horária" />
           <span class="sr-only">Grade Horária</span>
         </h2>
       </header>
+
+      <button data-html2canvas-ignore class="ltco_printscreen">
+        <i data-feather="camera"></i>
+        <span class="desc">Salve como imagem</span>
+      </button>
+
       <div class="grid_schedules">
         <div class="grid_schedules__row title">
           <div class="grid_schedules__col"></div>
@@ -283,5 +289,8 @@
       </footer>
     </div>
   </div>
+
+  <script src="./public/scripts/plugins.min.js"></script>
+  <script src="./public/scripts/main.js"></script>
 </body>
 </html>
