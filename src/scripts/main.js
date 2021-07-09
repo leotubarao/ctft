@@ -4,9 +4,27 @@
 
 {
   const buttonPrintScreen = document.querySelector('.ltco_printscreen');
-  const wrapperTest = document.querySelector('#root');
 
   buttonPrintScreen.addEventListener('click', ltcoPrintScreen);
+
+  function ltcoClearDynamicLink(el) {
+    if (!el) return;
+
+    document.body.removeChild(el)
+  }
+
+  function ltcoDownloadImage(uri, name) {
+    const link = document.createElement('a');
+
+    link.download = name;
+    link.href = uri;
+
+    document.body.appendChild(link);
+
+    link.click();
+
+    ltcoClearDynamicLink(link);
+  }
 
   function ltcoPrintScreen() {
     const optionsCanvas = {
@@ -15,23 +33,9 @@
     };
 
     html2canvas(document.body, optionsCanvas).then(function(canvas) {
-      var myImage = canvas.toDataURL('image/jpeg', 0.5);
-      ltcoSendWhatsApp(myImage);
+      const myImage = canvas.toDataURL('image/jpeg', 1);
+
+      ltcoDownloadImage(myImage, `${Date.now()}_schedules_ctft.jpg`);
     });
   }
-
-  function ltcoSendWhatsApp(uri) {
-    window.open('whatsapp://send?text='+encodeURIComponent(uri), '_blank');
-  }
-
-  /* function downloadURI(uri, name) {
-    var link = document.createElement("a");
-
-    link.download = name;
-    link.href = uri;
-    document.body.appendChild(link);
-    link.click();
-    //after creating link you should delete dynamic link
-    //clearDynamicLink(link);
-  } */
 }
