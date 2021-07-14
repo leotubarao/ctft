@@ -14,13 +14,13 @@
 }
 
 *::-moz-selection {
-  background-color: #009fe3;
+  background-color: #00aeef;
   color: #FFF;
 }
 
 *::-moz-selection,
 *::selection {
-  background-color: #009fe3;
+  background-color: #00aeef;
   color: #FFF;
 }
 
@@ -81,11 +81,11 @@ button {
 }
 
 a {
-  color: #009fe3;
+  color: #00aeef;
 }
 
 a:hover {
-  color: #007bb0;
+  color: #0089bc;
 }
 
 img {
@@ -127,7 +127,7 @@ footer {
 
 .grid_schedules:before {
   content: '';
-  background-color: #B3B7C1;
+  background-color: #97a1ad;
   position: absolute;
   width: 2px;
   top: 34px;
@@ -149,12 +149,12 @@ footer {
 }
 
 .grid_schedules__row.divider {
-  border-top: 2px solid #B3B7C1;
+  border-top: 2px solid #97a1ad;
   padding-top: 1rem;
 }
 
 .grid_schedules__row.title {
-  color: #B3B7C1;
+  color: #97a1ad;
 }
 
 .grid_schedules [title] {
@@ -169,7 +169,7 @@ footer {
 
 .grid_schedules__col:first-child {
   text-align: left;
-  color: #B3B7C1;
+  color: #97a1ad;
 }
 
 .grid_schedules__col__label {
@@ -183,7 +183,7 @@ footer {
 
 .grid_schedules__col__label:after {
   content: '';
-  background-color: #009fe3;
+  background-color: #00aeef;
   position: absolute;
   transform: skewX(-12deg);
   top: 0;
@@ -209,15 +209,41 @@ footer {
 }
 
 .grid_schedules__col__label.disabled {
-  color: #B3B7C1;
+  color: #97a1ad;
 }
 
 .grid_schedules__col__label.disabled:after {
-  background-color: #D8DEE5;
+  background-color: #c3d0e1;
+}
+
+.ltco_social {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: center;
+}
+
+.ltco_social a {
+  width: 28px;
+  text-decoration: none;
+  color: #646e7b;
+  transition: color 200ms ease-in-out;
+}
+
+.ltco_social a:hover {
+  color: #282a2b;
+}
+
+.ltco_social p {
+  margin-left: 0.5rem;
+  color: #153d8a;
+}
+
+.ltco_social p span {
+  color: #00aeef;
 }
 
 .ltco_printscreen {
-  background-color: #192847;
+  background-color: #153d8a;
   color: #FFF;
   height: 40px;
   border: 0;
@@ -230,10 +256,21 @@ footer {
   top: 20px;
   margin: -2rem auto 2rem;
   z-index: 999;
-  box-shadow: 0 14px 35px -12px #192847;
+  transition: all 300ms ease-in-out;
+  border: 2px solid #153d8a;
+  box-shadow: 0 14px 35px -12px #153d8a;
 }
 
-canvas {
-  margin-left: -20px;
-  margin-right: -20px;
+.ltco_printscreen[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ltco_printscreen:not([disabled]):hover, .ltco_printscreen:not([disabled]):focus {
+  background-color: #d1e1f5;
+  color: #153d8a;
+}
+
+.ltco_printscreen:not([disabled]):hover {
+  transform: translateY(-3px);
 }
