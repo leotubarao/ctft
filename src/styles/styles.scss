@@ -1,11 +1,13 @@
-$color1: #009fe3;
-$color2: #192847;
+$color1: #00aeef;
+$color2: #153d8a;
+$color3: #404148;
 
-$gray1: #686b75;
-$gray2: #282a2b;
-
-$gray3: #B3B7C1;
-$gray4: #D8DEE5;
+$support1: #282a2b;
+$support2: #646e7b;
+$support3: #97a1ad;
+$support4: #c3d0e1;
+$support5: #d1e1f5;
+$support6: #e4f4fe;
 
 @font-face {
   font-family: 'bignoodletitlingoblique';
@@ -113,7 +115,7 @@ footer {
   align-items: center;
   margin-top: 3rem;
   font-size: 1.5rem;
-  color: $gray2;
+  color: $color3;
   text-align: center;
 }
 
@@ -129,7 +131,7 @@ footer {
 
   &:before {
     content: '';
-    background-color: $gray3;
+    background-color: $support3;
     position: absolute;
     width: 2px;
     top: 34px;
@@ -150,12 +152,12 @@ footer {
     }
 
     &.divider {
-      border-top: 2px solid $gray3;
+      border-top: 2px solid $support3;
       padding-top: 1rem;
     }
 
     &.title {
-      color: $gray3;
+      color: $support3;
     }
   }
 
@@ -170,7 +172,7 @@ footer {
 
     &:first-child {
       text-align: left;
-      color: $gray3;
+      color: $support3;
     }
 
     &__label {
@@ -209,10 +211,10 @@ footer {
       }
 
       &.disabled {
-        color: $gray3;
+        color: $support3;
 
         &:after {
-          background-color: $gray4;
+          background-color: $support4;
         }
       }
     }
@@ -234,11 +236,18 @@ footer {
   top: 20px;
   margin: -2rem auto 2rem;
   z-index: 999;
+  transition: all 300ms ease-in-out;
+  border: 2px solid $color2;
 
   box-shadow: 0 14px 35px -12px rgba($color2, 30%);
-}
 
-canvas {
-  margin-left: -20px;
-  margin-right: -20px;
+  &:hover,
+  &:focus {
+    background-color: $support5;
+    color: $color2;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+  }
 }
