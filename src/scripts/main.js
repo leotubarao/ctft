@@ -27,13 +27,18 @@
   }
 
   function ltcoPrintScreen() {
+    const buttonCurrent = this;
     const optionsCanvas = {
       width: 700,
       windowWidth: 700
     };
 
+    buttonCurrent.disabled = true;
+
     html2canvas(document.body, optionsCanvas).then(function(canvas) {
       const myImage = canvas.toDataURL('image/jpeg', 1);
+
+      buttonCurrent.disabled = false;
 
       ltcoDownloadImage(myImage, `${Date.now()}_schedules_ctft.jpg`);
     });

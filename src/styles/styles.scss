@@ -267,13 +267,18 @@ footer {
 
   box-shadow: 0 14px 35px -12px rgba($color2, 30%);
 
-  &:hover,
-  &:focus {
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:not([disabled]):hover,
+  &:not([disabled]):focus {
     background-color: $support5;
     color: $color2;
   }
 
-  &:hover {
+  &:not([disabled]):hover {
     transform: translateY(-3px);
   }
 }
